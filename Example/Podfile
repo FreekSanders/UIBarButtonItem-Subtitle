@@ -1,0 +1,15 @@
+source 'https://github.com/CocoaPods/Specs.git'
+use_frameworks!
+
+target 'UIBarButtonItem-Subtitle_Example', :exclusive => true do
+  pod "UIBarButtonItem-Subtitle", :path => "../"
+end
+
+target 'UIBarButtonItem-Subtitle_Tests', :exclusive => true do
+  pod "UIBarButtonItem-Subtitle", :path => "../"
+
+  pod 'Specta'
+  pod 'Expecta'
+  pod 'FBSnapshotTestCase'
+  pod 'Expecta+Snapshots'
+end
