@@ -1,0 +1,25 @@
+{
+  "name": "UIBarButtonItem-Subtitle",
+  "version": "0.1.0",
+  "summary": "A short description of UIBarButtonItem-Subtitle.",
+  "description": "",
+  "homepage": "https://github.com/<GITHUB_USERNAME>/UIBarButtonItem-Subtitle",
+  "license": "MIT",
+  "authors": {
+    "Freek Sanders": "freekisanders@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/<GITHUB_USERNAME>/UIBarButtonItem-Subtitle.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "7.0"
+  },
+  "requires_arc": true,
+  "source_files": "Pod/Classes/**/*",
+  "resource_bundles": {
+    "UIBarButtonItem-Subtitle": [
+      "Pod/Assets/*.png"
+    ]
+  }
+}

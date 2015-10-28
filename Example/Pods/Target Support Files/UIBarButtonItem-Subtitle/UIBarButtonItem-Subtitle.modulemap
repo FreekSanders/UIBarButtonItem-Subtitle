@@ -1,0 +1,6 @@
+framework module UIBarButtonItem_Subtitle {
+  umbrella header "UIBarButtonItem-Subtitle-umbrella.h"
+
+  export *
+  module * { export * }
+}

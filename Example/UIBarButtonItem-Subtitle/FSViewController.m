@@ -7,9 +7,12 @@
 //
 
 #import "FSViewController.h"
+#import <UIBarButtonItem-Subtitle>
 
 @interface FSViewController ()
-
+@property (strong, nonatomic) UIBarButtonItem *libraryBarButton;
+@property (strong, nonatomic) UIBarButtonItem *searchBarButton;
+@property (strong, nonatomic) UIBarButtonItem *editBarButton;
 @end
 
 @implementation FSViewController
@@ -17,13 +20,32 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    [self createButtons];
+    self.navigationController.toolbarHidden = NO;
+    self.toolbarItems = @[self.libraryBarButton, self.searchBarButton, self.editBarButton];
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+#pragma mark - Buttons
+
+- (void)createButtons {
+    self.libraryBarButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"UIButtonBarOrganize"] subtitle:NSLocalizedString(@"Library", nil) textColor:[UIColor orangeColor] target:self action:@selector(libraryBarButtonPressed:)];
+    
+    self.searchBarButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"UIButtonBarSearch"] subtitle:NSLocalizedString(@"Search", nil) textColor:[UIColor blackColor] target:self action:@selector(searchBarButtonPressed:)];
+    
+    self.editBarButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"UIButtonBarCompose"] subtitle:NSLocalizedString(@"Edit", nil) textColor:[UIColor greenColor] target:self action:@selector(editBarButtonButtonPressed)];
+}
+
+#pragma mark - Action
+- (void)libraryBarButtonPressed:(UIBarButtonItem *)item {
+    NSLog(@"Library button pressed");
+}
+
+- (void)searchBarButtonPressed:(UIBarButtonItem *)item {
+    NSLog(@"Search button pressed");
+}
+
+- (void)editBarButtonButtonPressed {
+    NSLog(@"Edit button pressed");
 }
 
 @end
