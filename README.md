@@ -22,6 +22,7 @@ self.libraryBarButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNam
 ```
 
 The result is a UIBarButtonItem with the image named "UIButtonBarOrganize" and below it a text with the string "Library" in the color orange.
+
 ![My image](http://freeksanders.github.io./repository/img/UIBBarButtonImage.png)
 
 ## Requirements
