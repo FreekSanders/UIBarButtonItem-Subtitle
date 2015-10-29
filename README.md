@@ -11,9 +11,7 @@ It adds a function to enable subtitles underneath UIBarButtonItem images.
 
 ## Usage
 
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
-
-Then, to create a new UIBarButtonItem, use the following function:
+To create a new UIBarButtonItem, use the following function:
 ```
 - (UIBarButtonItem *)initWithImage:(UIImage *)image subtitle:(NSString *)subtitle textColor:(UIColor *)textColor target:(id)target action:(SEL)action;
 ```
