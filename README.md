@@ -5,9 +5,27 @@
 [![License](https://img.shields.io/cocoapods/l/UIBarButtonItem-Subtitle.svg?style=flat)](http://cocoapods.org/pods/UIBarButtonItem-Subtitle)
 [![Platform](https://img.shields.io/cocoapods/p/UIBarButtonItem-Subtitle.svg?style=flat)](http://cocoapods.org/pods/UIBarButtonItem-Subtitle)
 
+## UIBarButtonItem+Subtitle
+This is categorization of the UIBarButtonItem.
+It adds a function to enable subtitles underneath UIBarButtonItem images.
+
 ## Usage
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
+
+Then, to create a new UIBarButtonItem, use the following function:
+```
+- (UIBarButtonItem *)initWithImage:(UIImage *)image subtitle:(NSString *)subtitle textColor:(UIColor *)textColor target:(id)target action:(SEL)action;
+```
+
+For example:
+```
+self.libraryBarButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"UIButtonBarOrganize"] subtitle:NSLocalizedString(@"Library", nil) textColor:[UIColor orangeColor] target:self action:@selector(libraryBarButtonPressed:)];
+```
+
+The result is a UIBarButtonItem with the image named "UIButtonBarOrganize" and below it a text with the string "Library" in the color orange.
+
+
 
 ## Requirements
 
